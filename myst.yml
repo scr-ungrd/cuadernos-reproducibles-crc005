@@ -16,10 +16,7 @@ project:
     generar series de tiempo del agua superficial con el dataset JRC.
 
   authors:
-    - name: Mauricio Romero
-      orcid: 0000-0003-3282-0372
-      email: mauricio.romero@gestiondelriesgo.gov.co
-      corresponding: true
+    - name: Subdirección para el Conocimiento del Riesgo
       affiliations:
         - ungrd
 
