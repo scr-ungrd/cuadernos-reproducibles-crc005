@@ -1,0 +1,130 @@
+# =====================================================================
+# MyST configuration — Inundaciones Sentinel-1 SAR · CRC-005
+# Alineado con el patrón del cuaderno CRC-004 (scr-ungrd)
+# =====================================================================
+version: 1
+
+project:
+  id: cuadernos-reproducibles-crc005
+  title: "Detección de Inundaciones con Sentinel-1 SAR y Google Earth Engine"
+  short_title: "Inundaciones Sentinel-1"
+  description: >-
+    Cuaderno reproducible para la detección de inundaciones durante el fenómeno
+    La Niña 2021–2022 en Colombia, usando imágenes SAR del satélite Sentinel-1
+    procesadas en Google Earth Engine. Implementa un algoritmo de cambio de
+    backscatter para mapear la extensión de inundación por departamento y
+    generar series de tiempo del agua superficial con el dataset JRC.
+
+  authors:
+    - name: Mauricio Romero
+      orcid: 0000-0003-3282-0372
+      email: mauricio.romero@gestiondelriesgo.gov.co
+      corresponding: true
+      affiliations:
+        - ungrd
+
+  affiliations:
+    - id: ungrd
+      institution: Unidad Nacional para la Gestión del Riesgo de Desastres
+      department: Subdirección de Conocimiento del Riesgo
+      city: Bogotá
+      country: Colombia
+      url: https://www.gestiondelriesgo.gov.co
+      ror: ""
+
+  date: 2026-01-01
+
+  keywords:
+    - Google Earth Engine
+    - Sentinel-1
+    - SAR
+    - inundaciones
+    - Colombia
+    - La Niña
+    - geemap
+    - teledetección
+    - radar de apertura sintética
+    - JRC water
+    - backscatter
+    - riesgo de desastres
+    - UNGRD
+
+  subject: "Flood mapping & disaster risk assessment"
+
+  venue:
+    title: "Riesgos · UNGRD Cuadernos Reproducibles"
+    short_title: "Riesgos UNGRD"
+    url: https://scr-ungrd.github.io/riesgos
+
+  license:
+    code: MIT
+    content: CC-BY-SA-4.0
+
+  open_access: true
+
+  github: https://github.com/scr-ungrd/cuadernos-reproducibles-crc005
+  binder: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc005/main
+  banner: ./images/banner.png
+
+  # doi: ""  # diligenciar tras release v0.1.0 en Zenodo
+
+  bibliography:
+    - references.bib
+
+  exports:
+    - format: pdf
+      template: agu-journal
+      output: exports/article.pdf
+      article: gee-inundaciones-sentinel1.ipynb
+    - format: jats
+      output: exports/article.xml
+      article: gee-inundaciones-sentinel1.ipynb
+    - format: meca
+      output: exports/article.meca.zip
+      article: gee-inundaciones-sentinel1.ipynb
+
+  toc:
+    - file: gee-inundaciones-sentinel1.ipynb
+
+  jupyter: false
+
+  numbering:
+    figures: true
+    equations: true
+    tables: true
+    sections: false
+
+  abbreviations:
+    UNGRD: Unidad Nacional para la Gestión del Riesgo de Desastres
+    SNGRD: Sistema Nacional de Gestión del Riesgo de Desastres
+    SCR: Subdirección para el Conocimiento del Riesgo
+    GEE: Google Earth Engine
+    SAR: Synthetic Aperture Radar
+    JRC: Joint Research Centre
+    ESA: European Space Agency
+    IDEAM: Instituto de Hidrología, Meteorología y Estudios Ambientales
+    PNGRD: Plan Nacional de Gestión del Riesgo de Desastres
+    GRD: Ground Range Detected
+
+site:
+  template: article-theme
+  options:
+    logo_text: "Riesgos · UNGRD"
+    primary_color: "#0154a5"
+    secondary_color: "#ffffff"
+    accent_color: "#2563eb"
+    launch_buttons:
+      binderhub_url: https://mybinder.org
+      thebe: true
+  nav:
+    - title: "Inicio del proyecto"
+      url: https://scr-ungrd.github.io/riesgos
+    - title: "Repositorio"
+      url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc005
+  actions:
+    - title: "Abrir en Colab"
+      url: https://colab.research.google.com/github/scr-ungrd/cuadernos-reproducibles-crc005/blob/main/gee-inundaciones-sentinel1.ipynb
+      static: false
+    - title: "Abrir en Binder"
+      url: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc005/main?filepath=gee-inundaciones-sentinel1.ipynb
+      static: false
