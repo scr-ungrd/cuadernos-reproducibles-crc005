@@ -68,10 +68,14 @@ project:
   bibliography:
     - references.bib
 
+  downloads:
+    - id: article-pdf
+      title: Generar PDF
+
   exports:
     - format: pdf
       template: agu-journal
-      output: exports/article.pdf
+      output: exports/article-agu.pdf
       article: gee-inundaciones-sentinel1.ipynb
     - format: jats
       output: exports/article.xml
@@ -79,6 +83,11 @@ project:
     - format: meca
       output: exports/article.meca.zip
       article: gee-inundaciones-sentinel1.ipynb
+    - format: typst
+      article: gee-inundaciones-sentinel1.ipynb
+      output: article.pdf
+      template: ./_templates/plain-typst-article
+      id: article-pdf
 
   toc:
     - file: gee-inundaciones-sentinel1.ipynb
